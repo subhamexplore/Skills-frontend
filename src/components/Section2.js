@@ -6,7 +6,6 @@ import section2logo from '../assets/images/section2logo.png'
 
 const Section2 = () => {
     return(
-        <>
             <div id="section2">
                 <div className="section2items sm:text-lg" style={{color:'#858298',fontFamily:'Inter'}}>
                     <span id="sub-heading" className="animate-pulse">What is Skills++</span>
@@ -25,7 +24,6 @@ const Section2 = () => {
                     <img src={section2logo} alt="section2logo" />
                 </div>
             </div>
-        </>
     )
 }
 export default Section2

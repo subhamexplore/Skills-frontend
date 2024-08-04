@@ -11,7 +11,7 @@ const Section1 = () => {
     <div>
         <div id='rectangle'>
             <div id='rectangle2'>
-            <img src={rect2} alt='rectangle2' className='animate-bounce' />
+            <img src={rect2} alt='rectangle2'/>
             </div>
             <div id='rectangle1'>
             <img src={rect1} alt='rectangle1' />
@@ -22,13 +22,13 @@ const Section1 = () => {
                 <img src={section1logo}alt='section1-logo' />
             </div>
             <div id='section1-text' className='section1items text-justify'>
-                <span id='sub-heading' className='animate-bounce'>2K24</span>
+                <span id='sub-heading'>2K24</span>
                 <span id='heading'>SKILLS++</span>
                 <span className='text-xl sm:text-2xl' style={{color: '#D5CDCD'}}>Elevate Your Expertise</span>
                 <br/>
                 <br/>
                 <br/>
-                <p className='sm:text-lg' style={{color: '#D5CDCD'}}>Boost your skills with guidance in various tech domains. Gain expert knowledge, hands-on experience, personalized mentoring, and earn a certification. Transform your future, <span className='font-bold animate-ping' style={{color: '#FFFFFF'}}>REGISTER NOW!!</span></p>
+                <p className='sm:text-lg' style={{color: '#D5CDCD'}}>Boost your skills with guidance in various tech domains. Gain expert knowledge, hands-on experience, personalized mentoring, and earn a certification. Transform your future, <span className='font-bold animate-pulse' style={{color: '#FFFFFF'}}>REGISTER NOW!!</span></p>
                 
                 <button className='px-2 py-1 rounded-xl flex items-center bg-blue-50 hover:bg-violet-400 hover:text-white'>
                 Explore Domains
