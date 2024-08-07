@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import footerlogo from '../assets/images/footerlogo.png'
+import ScrollToTop from "./ScrollToTop";
 
 const Footer = () => {
     return(
@@ -15,16 +16,17 @@ const Footer = () => {
             <div id="footer-right">
                 <ul className="flex gap-6 pl-0">
                     <li>
-                        <Link to='#' className="text-white" >Youtube</Link>
-                    </li>
+                        <a href="https://www.youtube.com/@zairzarobosofdescluboutrb1825" target="_blank" rel="noopener noreferrer" className="text-white">Youtube</a>
+                        </li>
                     <li>
-                        <Link to='#' className="text-white" >Instagram</Link>
-                    </li>
+                        <a href="https://www.instagram.com/zairza.outr/" target="_blank" rel="noopener noreferrer" className="text-white">Instagram</a>
+                        </li>
                     <li>
-                        <Link to='#' className="text-white" >Linkedin</Link>
-                    </li>
+                        <a href="https://in.linkedin.com/company/zairza" target="_blank" rel="noopener noreferrer" className="text-white">LinkedIn</a>
+                        </li>
                 </ul>
             </div>
+            <ScrollToTop/>
         </div>
     )
 }

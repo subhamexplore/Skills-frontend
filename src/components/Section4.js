@@ -14,9 +14,9 @@ const Section4 = () => {
             </div>
             <div id="section4imgcontainer" className="w-full">
                 <div><img src={badge1} alt="badge1" className="max-h-[315px]" id="badge1"></img></div>
-                <div><img src={badge2} alt="badge2"></img></div>
-                <div><img src={badge3} alt="badge3"></img></div>
-                <div><img src={badge4} alt="badge4"></img></div>                
+                <div><img src={badge2} alt="badge2" className="max-h-[340px]"></img></div>
+                <div><img src={badge3} alt="badge3" className="max-h-[340px]"></img></div>
+                <div><img src={badge4} alt="badge4" className="max-h-[340px]"></img></div>                
             </div>
         </div>
     )

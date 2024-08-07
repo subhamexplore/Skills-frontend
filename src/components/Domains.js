@@ -4,7 +4,7 @@ import img3 from '../assets/images/folder3.png'
 
 export const Domains= [
     {
-        name:'Web Dev-Frontend & Backend',
+        name:'Web Dev',
         category:'Software Domain',
         image:img1
     },
@@ -62,5 +62,25 @@ export const Domains= [
         name:'Graphic Designing',
         category:'Design Domain',
         image:img2
+    },
+    {
+        name:'Backend',
+        category:'Software Domain',
+        image:img1
+    },
+    {
+        name:'Game-Dev',
+        category:'Software Domain',
+        image:img1
+    },
+    {
+        name:'Ethical Hacking & Cyber Security',
+        category:'Software Domain',
+        image:img1
+    },
+    {
+        name:'Cloud Computing',
+        category:'Software Domain',
+        image:img1
     }
 ]

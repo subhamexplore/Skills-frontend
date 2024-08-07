@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import rect1 from '../assets/images/Rectangle1.png';
 import rect2 from '../assets/images/Rectangle2.png';
 import rect3 from '../assets/images/Rectangle1_1.png';
@@ -16,7 +17,7 @@ const Section1 = () => {
             <div id='rectangle1'>
             <img src={rect1} alt='rectangle1' />
             </div>
-            </div>
+        </div>
         <div className='max-h-72' id='section1'>
             <div id='section1logo' className='section1items'>
                 <img src={section1logo}alt='section1-logo' />
@@ -31,7 +32,7 @@ const Section1 = () => {
                 <p className='sm:text-lg' style={{color: '#D5CDCD'}}>Boost your skills with guidance in various tech domains. Gain expert knowledge, hands-on experience, personalized mentoring, and earn a certification. Transform your future, <span className='font-bold animate-pulse' style={{color: '#FFFFFF'}}>REGISTER NOW!!</span></p>
                 
                 <button className='px-2 py-1 rounded-xl flex items-center bg-blue-50 hover:bg-violet-400 hover:text-white'>
-                Explore Domains
+                <Link to='section5' offset={-200}>Explore Domains </Link>
                 <img className='h-6 mx-1' src={telescope} alt='telescope' />
                 </button>
                 <br/>

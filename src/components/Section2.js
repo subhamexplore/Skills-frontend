@@ -18,7 +18,7 @@ const Section2 = () => {
                     <div className="ml-3 leading-tight">Get one on one <span className="text-white font-bold">mentorship </span>from your members along with <span className="text-white font-bold">assignments </span>on start of each week</div></span>
                     <br/>
                     <span className="flex items-center"><img src={trophylogo} alt="trophylogo" className="h-9" />
-                    <div className="ml-3 leading-tight">Earn <span className="text-white font-bold">badges </span>on successful submission of assignments of first 3 weeks and a <span className="text-white font-bold">certificate </span>on the 4th week</div></span>
+                    <div className="ml-3 leading-tight">Earn <span className="text-white font-bold">badges </span>on successful submission of assignments of 4 weeks and a <span className="text-white font-bold">certificate </span>at the end of 4th week</div></span>
                 </div>
                 <div className="section2items">
                     <img src={section2logo} alt="section2logo" />

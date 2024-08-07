@@ -15,13 +15,13 @@ const Section3= () => {
                     Week 3:
                 </div>
                 <div>
-                    22<sup>nd</sup> July - 28<sup>th</sup> July
-                    <br/>
-                    29<sup>th</sup> July - 4<sup>th</sup> Aug
-                    <br/>
-                    5<sup>th</sup> Aug - 11<sup>th</sup> July
-                    <br/>
                     12<sup>th</sup> Aug - 18<sup>th</sup> Aug
+                    <br/>
+                    19<sup>th</sup> Aug - 25<sup>th</sup> Aug
+                    <br/>
+                    26<sup>th</sup> Aug - 1<sup>st</sup> Sept
+                    <br/>
+                    2<sup>nd</sup> Sept - 8<sup>th</sup> Sept
                 </div>
             </div>
         </div>       
