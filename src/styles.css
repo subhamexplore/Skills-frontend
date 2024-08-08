@@ -190,6 +190,7 @@ body{
   font-size: 30px;
 }
 #footer{
+  width: 100%;
   min-height: 108px;
   background: #9A8DEC;
   padding: 2vw 10vw 2vw;
@@ -284,6 +285,7 @@ body{
   color: #C3C1CE;
   justify-content: center;
 }
+
 @media screen and (max-width:2560px) and (min-width:1440px) {
   #register,#signin{
     gap: 6vw;
@@ -448,7 +450,7 @@ body{
     width:351px;
   }
 }
-@media screen and (max-width:420px){
+@media screen and (max-width:430px){
   #rectangle{
     width: 75%;
   }
@@ -472,6 +474,9 @@ body{
   }
   .full-lengthitem1{
     margin-bottom: 16px;
+  }
+  #profilelogo{
+    width: 316px;
   }
 }
 @media screen and (max-width:375px) {
@@ -499,8 +504,12 @@ body{
   #suggestion-box{
     width:290px;
   }
+
+  #profilelogo{
+    width: 316px;
+  }
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width:330px) {
   #section5folders{
     width: 125px;
   }
@@ -527,5 +536,16 @@ body{
   }
   #suggestion-box{
     width:270px;
+  }
+  #profilelogo{
+    width: 316px;
+  }
+  #profileheading{
+    width: Hug (260px)px;
+    height: Hug (60px)px;
+    top: 124px;
+    left: 61px;
+    gap: 8px;
+    opacity: 0px;
   }
 }

@@ -2,10 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go"
 import logo from '../assets/images/signinlogo.png'
+import Footer from "./Footer"; 
+import Navbar from "./Navbar"
 
 const SignIn = () => {
     return(
-        <div id="signin" className="flex justify-center">s
+        <div id="signin-page" className="flex flex-col items-center">
+        <div className="flex align-items-center justify-content-center mt-20"><Navbar/></div>
+        <div id="signin" className="flex justify-center">
                 <div id="signintext">
                     <div id="signintextcontainer" style={{padding:'0px 16px 10px 16px'}}>
                         <div id="signintextheading">
@@ -35,6 +39,8 @@ const SignIn = () => {
                     </div>
                 </div>
                 <div><img src = {logo} alt='logo' id="signinlogo" /></div>
+            </div>
+                <Footer/>
             </div>
     )
 }

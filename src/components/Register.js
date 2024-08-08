@@ -4,12 +4,16 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go"
 import logo from '../assets/images/registerlogo.png'
 import {Domains} from './Domains'
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const Register = () => {
     
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     return(
+        <div id="signin-page" className="flex flex-col items-center">
+            <div className="flex align-items-center justify-content-center mt-20"><Navbar/></div>
             <div id="register" className="flex justify-center">
                 <div id="signintext" className="registertext">
                     <div id="signintextcontainer" style={{padding:'0px 16px 10px 16px'}}>
@@ -145,8 +149,10 @@ const Register = () => {
                 </div>
                 <div><img src = {logo} alt='logo' id="registerlogo" /></div>
             </div>
+                <Footer/>
+            </div>
     )
 }
 
-export default Register
+export default Register;
 

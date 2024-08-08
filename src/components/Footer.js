@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import footerlogo from '../assets/images/footerlogo.png'
-import ScrollToTop from "./ScrollToTop";
 
 const Footer = () => {
     return(
@@ -26,7 +25,6 @@ const Footer = () => {
                         </li>
                 </ul>
             </div>
-            <ScrollToTop/>
         </div>
     )
 }
