@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-scroll";
 import { NavLink, useNavigate } from "react-router-dom";
 import img1 from '../assets/images/navbar-logo.png';
 
@@ -54,7 +54,7 @@ const Navbar = () => {
               <NavLink to="/register" className="text-black no-underline bg-blue-50 hover:bg-violet-300 font-medium rounded-lg text-sm px-4 py-2 text-center cursor-pointer">Register</NavLink>
 
               <button 
-                onClick={() => setIsMenuOpen(!isMenuOpen)} 
+                 onClick={() => setIsMenuOpen(!isMenuOpen)} 
                 type="button" 
                 className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden" 
                 aria-controls="navbar-cta" 
@@ -70,19 +70,19 @@ const Navbar = () => {
           <div className={`items-center justify-between ${isMenuOpen ? 'flex' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-cta">
             <ul className="flex flex-col font-semibold text-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
               <li>
-                <button onClick={() => handleNavigation('section2')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">Process</button>
+                <Link spy={true} smooth={true} duration={0} offset={offset}  onClick={() => handleNavigation('section2')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">Process</Link>
               </li>
               <li>
-                <button onClick={() => handleNavigation('section3')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">Timeline</button>
+                <Link spy={true} smooth={true} duration={0} offset={offset} onClick={() => handleNavigation('section3')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">Timeline</Link>
               </li>
               <li>
-                <button onClick={() => handleNavigation('section4')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">Perks</button>
+                <Link spy={true} smooth={true} duration={0} offset={offset} onClick={() => handleNavigation('section4')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">Perks</Link>
               </li>
               <li>
-                <button onClick={() => handleNavigation('section5')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">Explore Domains</button>
+                <Link spy={true} smooth={true} duration={0} offset={offset} onClick={() => handleNavigation('section5')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">Explore Domains</Link>
               </li>
               <li>
-                <button onClick={() => handleNavigation('section6')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">FAQs</button>
+                <Link spy={true} smooth={true} duration={0} offset={offset} onClick={() => handleNavigation('section6')} className="nav-links block text-white rounded hover:bg-gray-900 md:bg-transparent cursor-pointer">FAQs</Link>
               </li>
             </ul>
           </div>
