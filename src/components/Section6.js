@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'; 
 
 function Section6() {
   const [openFAQIndex, setOpenFAQIndex] = useState(null);
@@ -8,11 +9,10 @@ function Section6() {
     setOpenFAQIndex(prevState => prevState === index ? null : index);
   };
 
-  // Sample FAQs data
   const faqs = [
     {
       question: "Is Skills++ 2024 free?",
-      answer: "Yes, Skills++ 2024 is absolutely free for Zairza Members."
+      answer: "Yes, Skills++ 2024 is absolutely free for all."
     },
     {
       question: "What is the drive link that I have to submit on the registration page?",
@@ -53,20 +53,9 @@ function Section6() {
                   <span className="flex text-lg font-semibold text-white">
                     {faq.question}
                   </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5 text-gray-500"
-                  >
-                    <polyline points={openFAQIndex === index ? "6 18 12 12 18 18" : "18 6 12 12 6 6"} />
-                  </svg>
+                  {openFAQIndex === index ? (
+                  <AiOutlineUp style={{ width: '16px', height: '16px', minWidth: '16px', minHeight: '16px' }} className="text-gray-500" />) : (<AiOutlineDown style={{ width: '16px', height: '16px', minWidth: '16px', minHeight: '16px' }} className="text-gray-500" />)
+                  }
                 </button>
                 {openFAQIndex === index && (
                   <div className="px-4 pb-5 sm:px-6 sm:pb-6">

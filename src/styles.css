@@ -509,7 +509,7 @@ body{
     width: 316px;
   }
 }
-@media screen and (max-width:330px) {
+@media screen and (max-width:320px) {
   #section5folders{
     width: 125px;
   }
@@ -540,12 +540,12 @@ body{
   #profilelogo{
     width: 316px;
   }
-  #profileheading{
+  /* #profileheading{
     width: Hug (260px)px;
     height: Hug (60px)px;
     top: 124px;
     left: 61px;
     gap: 8px;
     opacity: 0px;
-  }
+  } */
 }
