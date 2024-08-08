@@ -30,7 +30,7 @@ const Home = () => {
       </Element>
       <Element name="section2">
         <Empty/>
-        <Section2 />
+        <Section2/>
       </Element>
       <Element name="section3">
         <Empty/>

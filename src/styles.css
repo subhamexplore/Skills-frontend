@@ -75,6 +75,12 @@ body{
   justify-content: space-around;
   align-items: center;
   position: relative;
+  margin-top:-300px;
+}
+@media(max-width:1260px){
+  #section2{
+    margin-top:0;
+  }
 }
 .section2items{
   width: 540px;
