@@ -36,7 +36,7 @@ const Profile = ({username = 'Abhinaba Dash',email='abhinabadash19@gmail.com',ba
                             }}>
                             <div className="flex justify-around h-[220px]">
                                 <img
-                                src={badge1} style={{width: '111.77px',minHeight:'208px',padding:'16px 0px 16px 0px'}}
+                                src={badge1} style={{minHeight:'208px',padding:'16px 0px 16px 0px'}}
                                 />
                             </div>
                             <div className="p-3 flex flex-col gap-[10px] rounded-b-2xl" style={{background:'#362D6D'}}>
@@ -77,3 +77,4 @@ const Profile = ({username = 'Abhinaba Dash',email='abhinabadash19@gmail.com',ba
 }
 
 export default Profile;
+

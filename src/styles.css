@@ -26,7 +26,7 @@ body{
   line-height: 65px;
 }
 #navbar {
-  font-family: "Inter", sans-serif;   
+  font-family: "Inter", sans-serif;   /*Inter font*/
   }
 #navbar-cta{
   position: relative;
@@ -83,7 +83,7 @@ body{
 #section3{
   background: #9A8DEC;
   font-family: "Inter", sans-serif;
-  margin: 60px 0 60px;
+  margin: 0px 0 30px;
   padding: 40px;
   text-align: center;
 }
@@ -120,7 +120,7 @@ body{
 }
 #section5{
   font-family: "Inter", sans-serif;
-  margin: 60px 7vw 60px;
+  margin: 0px 7vw 0px;
   text-align: center;
 }
 #section5item1{
@@ -173,7 +173,7 @@ body{
 }
 #section6{
   font-family: "Inter", sans-serif;
-  margin: 60px 7vw 60px;
+  margin: 0px 7vw 60px;
 }
 .scrollToTop {
   position: fixed;
@@ -190,7 +190,6 @@ body{
   font-size: 30px;
 }
 #footer{
-  width: 100%;
   min-height: 108px;
   background: #9A8DEC;
   padding: 2vw 10vw 2vw;
@@ -214,8 +213,8 @@ body{
 }
 
 #signin{
-  padding: 20px 16px 20px 16px;
-  margin:  8vw 0 8vw;
+  padding: 180px 16px 20px 16px;
+  margin:  0 0 8vw;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   color: #C3C1CE;
@@ -254,8 +253,8 @@ body{
   display: block;
 }
 #register{
-  padding: 20px 16px 20px 16px;
-  margin:  4vw 0vw 0vw;
+  padding: 180px 16px 20px 16px;
+  margin:  0vw 0vw 0vw;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   color: #C3C1CE;
@@ -272,20 +271,22 @@ body{
 }
 #registerlogo{
   position: sticky;
-  top: 50px;
+  top: 180px;
   height: 427.41px;
   width:409.52px;
 }
 #profile{
   margin: auto;
-  padding-top: 160px;
+  padding-top: 130px;
   padding-bottom: 50px;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   color: #C3C1CE;
   justify-content: center;
 }
-
+#domaincards{
+  width: 259px;
+}
 @media screen and (max-width:2560px) and (min-width:1440px) {
   #register,#signin{
     gap: 6vw;
@@ -339,7 +340,7 @@ body{
     display: none;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .nav-links{
     margin-top: 20px;
   }
@@ -354,6 +355,7 @@ body{
   }
   #profileheading{
     text-align: center;
+    padding:0px 16px 10px 16px;
   }
   #profiletext{
     display: flex;
@@ -450,7 +452,7 @@ body{
     width:351px;
   }
 }
-@media screen and (max-width:430px){
+@media screen and (max-width:420px){
   #rectangle{
     width: 75%;
   }
@@ -474,9 +476,6 @@ body{
   }
   .full-lengthitem1{
     margin-bottom: 16px;
-  }
-  #profilelogo{
-    width: 316px;
   }
 }
 @media screen and (max-width:375px) {
@@ -503,10 +502,6 @@ body{
   }
   #suggestion-box{
     width:290px;
-  }
-
-  #profilelogo{
-    width: 316px;
   }
 }
 @media screen and (max-width:320px) {
@@ -537,15 +532,4 @@ body{
   #suggestion-box{
     width:270px;
   }
-  #profilelogo{
-    width: 316px;
-  }
-  /* #profileheading{
-    width: Hug (260px)px;
-    height: Hug (60px)px;
-    top: 124px;
-    left: 61px;
-    gap: 8px;
-    opacity: 0px;
-  } */
 }

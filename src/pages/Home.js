@@ -8,6 +8,7 @@ import Section4 from '../components/Section4';
 import Section5 from '../components/Section5';
 import Section6 from '../components/Section6';
 import ScrollToTop from '../components/ScrollToTop';
+import Empty from '../components/Empty';
 
 const Home = () => {
   const location = useLocation();
@@ -15,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     if (location.state?.section) {
       scroller.scrollTo(location.state.section, {
-        duration: 800,
+        duration: 0,
         delay: 0,
         smooth: 'easeInOutQuart',
       });
@@ -28,18 +29,23 @@ const Home = () => {
         <Section1 />
       </Element>
       <Element name="section2">
+        <Empty/>
         <Section2 />
       </Element>
       <Element name="section3">
+        <Empty/>
         <Section3 />
       </Element>
       <Element name="section4">
+        <Empty/>
         <Section4 />
       </Element>
       <Element name="section5">
+        <Empty/>
         <Section5 />
       </Element>
       <Element name="section6">
+        <Empty/>
         <Section6 />
       </Element>
       <ScrollToTop/>
@@ -47,4 +53,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;

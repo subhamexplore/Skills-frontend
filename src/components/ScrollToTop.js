@@ -17,11 +17,11 @@ const ScrollToTop = () => {
     }, []);
 
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        
+            window.scrollTo({ top: 0, behavior: "smooth" }); // Attempt smooth scroll
+        
     };
+    
 
     return (
         showButton && (
