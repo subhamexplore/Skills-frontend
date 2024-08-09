@@ -5,7 +5,7 @@ import logo from "../assets/images/registerlogo.png";
 import { Domains } from "./Domains";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const Register = () => {
   const nav = useNavigate();
@@ -40,8 +40,8 @@ const Register = () => {
       ...formData,
       [domain]: {
         ...formData[domain],
-        [name]: value
-      }
+        [name]: value,
+      },
     });
   };
 
@@ -52,31 +52,32 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await fetch("https://skills-backend-r5yi.onrender.com/users/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://skills-backend-r5yi.onrender.com/users/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await response.json();
-      if (data.message === "User already exists") {
-        toast.error(data.message);
-        // alert(data.message);
-        window.location.reload();
-      } else {
-        toast.success("Successfully registered!");
-        // alert(data.message);
+      console.log("data " + data);
+
+      if (data.message === "Signed up successfully") {
+        toast.success(data.message);
         nav("/signin");
+      } else {
+        toast.error(data.message);
+        window.location.reload();
       }
     } catch (error) {
-      toast.error("Failed! Try again.");
-      alert("Failed! Try again.");
+      toast.error(error.message);
     }
   };
 
   console.log(formData);
-  
 
   return (
     <div id="register" className="flex justify-center">
@@ -213,7 +214,7 @@ const Register = () => {
               <select
                 name="description"
                 value={formData.domain1.description}
-                onChange={(e) => handleDomainChange(e, 'domain1')}
+                onChange={(e) => handleDomainChange(e, "domain1")}
               >
                 <option value="">First Domain</option>
                 {Domains.map((domain, idx) => (
@@ -227,7 +228,7 @@ const Register = () => {
               <select
                 name="description"
                 value={formData.domain2.description}
-                onChange={(e) => handleDomainChange(e, 'domain2')}
+                onChange={(e) => handleDomainChange(e, "domain2")}
               >
                 <option value="">Second Domain</option>
                 {Domains.map((domain, idx) => (
@@ -250,7 +251,7 @@ const Register = () => {
               name="drive"
               placeholder="Drive Link (for First Domain)"
               value={formData.domain1.drive}
-                onChange={(e) => handleDomainChange(e, 'domain1')}
+              onChange={(e) => handleDomainChange(e, "domain1")}
             ></input>
           </div>
           <div>
@@ -259,7 +260,7 @@ const Register = () => {
               placeholder="Drive Link (for Second Domain)"
               name="drive"
               value={formData.domain2.drive}
-                onChange={(e) => handleDomainChange(e, 'domain2')}
+              onChange={(e) => handleDomainChange(e, "domain2")}
             ></input>
           </div>
           <div className="pl-4 pr-4 pt-1 pb-1 text-justify">
