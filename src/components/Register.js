@@ -5,6 +5,7 @@ import logo from "../assets/images/registerlogo.png";
 import { Domains } from "./Domains";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const nav = useNavigate();
@@ -60,13 +61,16 @@ const Register = () => {
       });
       const data = await response.json();
       if (data.message === "User already exists") {
-        alert(data.message);
+        toast.error(data.message);
+        // alert(data.message);
         window.location.reload();
       } else {
-        alert(data.message);
+        toast.success("Successfully registered!");
+        // alert(data.message);
         nav("/signin");
       }
     } catch (error) {
+      toast.error("Failed! Try again.");
       alert("Failed! Try again.");
     }
   };

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
 import img from "../assets/images/profileimg.png";
 import badge1logo from "../assets/images/rogue.png";
 import kiddo from "../assets/images/badge1.png";
@@ -11,9 +12,11 @@ import taskslogo from "../assets/images/taskslogo.png";
 import submitlogo from "../assets/images/submitlogo.png";
 import usernamelogo from "../assets/images/user.png";
 import emaillogo from "../assets/images/mail.png";
+import Loader from "../components/Loader";
 
 const Profile = ({setName}) => {
   const [user, setUser] = useState();
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,8 +33,10 @@ const Profile = ({setName}) => {
         const result = await response.json();
         setUser(result.userData);
         setName(user.username);
+        setLoading(false);
         console.log(user);
       } catch (err) {
+        toast.error(err.message);
         console.log(err.message);
       }
     };
@@ -80,7 +85,9 @@ const Profile = ({setName}) => {
   localStorage.setItem("userName", user?user.username.split(" ")[0]:"")
 
   return (
-    <div id="profile" className="flex max-w-[1084px] min-h-[591px]">
+    <>
+    {loading && <Loader/>}
+    <div id="profile" className={loading ? 'content blurred flex max-w-[1084px] min-h-[591px]' : 'content flex max-w-[1084px] min-h-[591px]'} >
       <div className="flex items-end">
         <img
           src={img}
@@ -231,6 +238,7 @@ const Profile = ({setName}) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
