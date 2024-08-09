@@ -143,6 +143,15 @@ body {
 #section5item1 .text {
   word-wrap: break-word;
 }
+@media (max-width: 400px) {
+  .custom-mx {
+      margin-left: 3vw;
+      margin-right: 3vw;
+  }
+  .nav-reg{
+    margin-right: -40px;
+  }
+}
 #dropdown-menu {
   font-size: 14px;
   background: #362d6d;
@@ -280,6 +289,18 @@ body {
   top: 180px;
   height: 427.41px;
   width: 409.52px;
+}
+@media(max-width:400px){
+  #signininput{
+    transform: scale(1.1);
+    margin-top: 80px;
+  }
+}
+@media(max-width:350px){
+  #signininput{
+    transform: scale(1);
+    margin-top: 40px;
+  }
 }
 #profile {
   margin: auto;

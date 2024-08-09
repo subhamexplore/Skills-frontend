@@ -103,7 +103,7 @@ const Register = () => {
   console.log(formData);
 
   return (
-    <div id="register" className="flex justify-center">
+    <div id="register" className="flex justify-center" style={{ marginBottom:"150px"}}>
       <div id="signintext" className="registertext">
         <div id="signintextcontainer" style={{ padding: "0px 16px 10px 16px" }}>
           <div id="signintextheading">

@@ -38,17 +38,17 @@ const Navbar = ({name}) => {
   return (
     <div className="w-full fixed z-50">
       <nav
-        className="h-15 bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 mx-[9vw] my-[3vmax]"
+        className="h-15 bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 mx-[9vw] my-[3vmax] max-w-[400px]:mx-[1vw] custom-mx"
         id="navbar"
       >
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-3">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-around nav-mob mx-auto p-3">
           <NavLink
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"
           >
             <img src={img1} className="h-8" alt="navbarlogo" />
           </NavLink>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse nav-reg">
             {!location.pathname.includes("/profile") && (
               <NavLink
                 to={

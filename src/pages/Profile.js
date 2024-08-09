@@ -88,6 +88,7 @@ const Profile = ({ setName }) => {
     <>
       {loading && <Loader />}
       <div
+      style={{padding:"200px 0 100px 0"}}
         id="profile"
         className={
           loading
