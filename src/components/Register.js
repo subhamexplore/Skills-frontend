@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 
 const Register = () => {
   const nav = useNavigate();
+  const [parDomain, setParDomain] = useState(Domains)
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [formData, setFormData] = useState({
     username: "",
@@ -70,6 +71,14 @@ const Register = () => {
       toast.error(error.message);
     }
   };
+
+  const handleDomain = (e) => {
+    handleDomainChange(e,"domain1");
+    const p = Domains.filter((elem)=>{
+      return elem.name!==e.target.value
+    })
+    setParDomain(p);
+  }
 
   console.log(formData);
 
@@ -208,9 +217,7 @@ const Register = () => {
               <select
                 name="description"
                 value={formData.domain1.description}
-                onChange={(e) => {
-                  handleDomainChange(e, "domain1");
-                }}
+                onChange={(e)=>{handleDomain(e)}}
               >
                 <option value="">First Domain</option>
                 {Domains.map((domain, idx) => (
@@ -227,7 +234,7 @@ const Register = () => {
                 onChange={(e) => handleDomainChange(e, "domain2")}
               >
                 <option value="">Second Domain</option>
-                {Domains.map((domain, idx) => (
+                {parDomain.map((domain, idx) => (
                   <option value={domain.name} key={`Domains-${idx}`}>
                     {domain.name}
                   </option>
