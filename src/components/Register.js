@@ -70,7 +70,6 @@ const Register = () => {
         nav("/signin");
       } else {
         toast.error(data.message);
-        window.location.reload();
       }
     } catch (error) {
       toast.error(error.message);
