@@ -219,7 +219,7 @@ const Register = () => {
               <select
                 name="description"
                 value={formData.domain1.description}
-                onChange={(e) => {handleDomainChange(e, "domain1"); handleFirstDomainChange(e)}}
+                onChange={(e) => {handleFirstDomainChange(e);handleDomainChange(e, "domain1");}}
               >
                 <option value="">First Domain</option>
                 {Domains.map((domain, idx) => (

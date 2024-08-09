@@ -180,7 +180,7 @@ const Profile = ({setName}) => {
                 </div>
               </div>
             </div>
-            <div
+            {user.domain2.description===""?"":<div
               id="domaincards"
               className="min-h-[347px] rounded-2xl"
               style={{
@@ -233,7 +233,7 @@ const Profile = ({setName}) => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div>}
           </div>
         </div>
       </div>
