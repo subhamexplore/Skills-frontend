@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import logo from "../assets/images/signinlogo.png";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const SignIn = () => {
   const nav = useNavigate();
@@ -27,9 +28,11 @@ const SignIn = () => {
       });
       const data = await response.json();
       localStorage.setItem("authToken", data.token);
+      toast.success("Successfully logged in");
       window.location.href = '/profile';
     } catch (error) {
-      alert("Failed! Try again.");
+      toast.error(error.message);
+      // alert("Failed! Try again.");
     }
   };
   return (
