@@ -194,7 +194,7 @@ const Profile = ({ setName }) => {
                   </div>
                 </div>
               </div>
-              {user.domain2.description === "" ? (
+              {user?.domain2.description === "" ? (
                 <div></div>
               ) : (
                 <div
