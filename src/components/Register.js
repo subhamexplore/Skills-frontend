@@ -47,6 +47,26 @@ const Register = () => {
   };
 
   const handleRegister = async () => {
+    if(
+      !formData.username ||
+      !formData.email ||
+      !formData.regNo ||
+      !formData.phNo ||
+      !formData.branch ||
+      !formData.year ||
+      !formData.password ||
+      !formData.domain1.description ||
+      !formData.domain1.drive
+
+    ){
+      toast.error("Fill all the details");
+      return;
+    }
+    if(formData.domain2.description && !formData.domain2.drive){
+      toast.error("Fill all the details");
+      return;
+    }
+
     try {
       const response = await fetch(
         "https://skills-backend-r5yi.onrender.com/users/signup",
@@ -266,13 +286,15 @@ const Register = () => {
             ></input>
           </div>
           <div>
-            <input
+            {formData.domain2.description === ""? "" : (
+              <input
               type="url"
               placeholder="Drive Link (for Second Domain)"
               name="drive"
               value={formData.domain2.drive}
               onChange={(e) => handleDomainChange(e, "domain2")}
             ></input>
+            )}
           </div>
           <div className="pl-4 pr-4 pt-1 pb-1 text-justify">
             **Create a folder in your google drive and share that link here.
