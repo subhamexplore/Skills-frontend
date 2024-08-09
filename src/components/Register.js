@@ -7,7 +7,6 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-
   const nav = useNavigate();
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -44,6 +43,9 @@ const Register = () => {
       }
     });
   };
+
+  const [selectedFirstDomain, setSelectedFirstDomain] = useState("");
+  const [selectedSecondDomain, setSelectedSecondDomain] = useState("");
 
   console.log("formData", formData);
 
@@ -211,7 +213,7 @@ const Register = () => {
               >
                 <option value="">First Domain</option>
                 {Domains.map((domain, idx) => (
-                  <option value={domain.name} key={Domains-${idx}}>
+                  <option value={domain.name} key={`Domains-${idx}`}>
                     {domain.name}
                   </option>
                 ))}
@@ -225,7 +227,7 @@ const Register = () => {
               >
                 <option value="">Second Domain</option>
                 {Domains.map((domain, idx) => (
-                  <option value={domain.name} key={Domains-${idx}}>
+                  <option value={domain.name} key={`Domains-${idx}`}>
                     {domain.name}
                   </option>
                 ))}
@@ -293,3 +295,5 @@ const Register = () => {
     </div>
   );
 };
+
+export default Register;
