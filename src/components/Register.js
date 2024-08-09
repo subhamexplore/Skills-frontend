@@ -7,6 +7,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+
   const nav = useNavigate();
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -27,74 +28,34 @@ const Register = () => {
     },
   });
 
-  const [selectedFirstDomain, setSelectedFirstDomain] = useState("");
-  const [selectedSecondDomain, setSelectedSecondDomain] = useState("");
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
-
   const handleDomainChange = (e, domain) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [domain]: {
         ...formData[domain],
-        [name]: value,
-      },
+        [name]: value
+      }
     });
   };
 
-  const handleFirstDomainChange = (e) => {
-    const selectedDomainName = e.target.value;
-    setSelectedFirstDomain(selectedDomainName);
-    setFormData({
-      ...formData,
-      domain1: {
-        ...formData.domain1,
-        description: selectedDomainName,
-      },
-    });
-
-    if (selectedSecondDomain === selectedDomainName) {
-      setSelectedSecondDomain("");
-      setFormData({
-        ...formData,
-        domain2: {
-          ...formData.domain2,
-          description: "",
-        },
-      });
-    }
-  };
-
-  const handleSecondDomainChange = (e) => {
-    const selectedDomainName = e.target.value;
-    setSelectedSecondDomain(selectedDomainName);
-    setFormData({
-      ...formData,
-      domain2: {
-        ...formData.domain2,
-        description: selectedDomainName,
-      },
-    });
-  };
+  console.log("formData", formData);
 
   const handleRegister = async () => {
     try {
-      const response = await fetch(
-        "https://skills-backend-r5yi.onrender.com/users/signup",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("https://skills-backend-r5yi.onrender.com/users/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
       const data = await response.json();
       if (data.message === "User already exists") {
         alert(data.message);
@@ -107,6 +68,9 @@ const Register = () => {
       alert("Failed! Try again.");
     }
   };
+
+  console.log(formData);
+  
 
   return (
     <div id="register" className="flex justify-center">
@@ -243,7 +207,7 @@ const Register = () => {
               <select
                 name="description"
                 value={formData.domain1.description}
-                onChange={handleFirstDomainChange}
+                onChange={(e) => handleDomainChange(e, 'domain1')}
               >
                 <option value="">First Domain</option>
                 {Domains.map((domain, idx) => (
@@ -257,21 +221,20 @@ const Register = () => {
               <select
                 name="description"
                 value={formData.domain2.description}
-                onChange={handleSecondDomainChange}
+                onChange={(e) => handleDomainChange(e, 'domain2')}
               >
                 <option value="">Second Domain</option>
-                {Domains.filter((domain) => domain.name !== selectedFirstDomain)
-                  .map((domain, idx) => (
-                    <option value={domain.name} key={`AvailableDomains-${idx}`}>
-                      {domain.name}
-                    </option>
-                  ))}
+                {Domains.map((domain, idx) => (
+                  <option value={domain.name} key={`Domains-${idx}`}>
+                    {domain.name}
+                  </option>
+                ))}
                 <option value="none">none</option>
               </select>
             </div>
           </div>
           <div className="pl-4 pr-4 pt-1 pb-1 text-justify">
-            **At max you can register for 2 domains. In case you want to enroll
+            **At max you can register for 2 domains. In case you want to enrol
             for only one domain then fill none in the second domain. And write
             'N/A' in the Drive Link( for Second Domain ) mentioned below.
           </div>
@@ -281,45 +244,53 @@ const Register = () => {
               name="drive"
               placeholder="Drive Link (for First Domain)"
               value={formData.domain1.drive}
-              onChange={(e) => handleDomainChange(e, "domain1")}
+                onChange={(e) => handleDomainChange(e, 'domain1')}
             ></input>
           </div>
           <div>
             <input
               type="url"
-              name="drive"
               placeholder="Drive Link (for Second Domain)"
+              name="drive"
               value={formData.domain2.drive}
-              onChange={(e) => handleDomainChange(e, "domain2")}
+                onChange={(e) => handleDomainChange(e, 'domain2')}
             ></input>
           </div>
-          <div className="flex justify-between mb-4 mt-4">
-            <div>
-              <button className="form-back-btn">
-                <GoArrowLeft
-                  size="20"
-                  style={{ marginTop: "1.5px", marginRight: "5px" }}
-                />
-                Back
-              </button>
-            </div>
-            <div>
-              <button className="form-next-btn" onClick={handleRegister}>
-                Create Account
-                <GoArrowRight
-                  size="20"
-                  style={{ marginTop: "1.5px", marginLeft: "5px" }}
-                />
-              </button>
-            </div>
+          <div className="pl-4 pr-4 pt-1 pb-1 text-justify">
+            **Create a folder in your google drive and share that link here.
+            This is the place where you will submit your solutions for the given
+            task. So keep this drive safely with you
           </div>
         </div>
+        <div className="flex lg:justify-end justify-between gap-4 mt-8">
+          <NavLink
+            to="/"
+            className="flex items-center h-8 no-underline text-white border-white rounded border pl-4 pr-4 justify-center gap-1"
+            style={{ width: "90px", fontSize: "12px", fontWeight: "550" }}
+          >
+            <GoArrowLeft />
+            Back
+          </NavLink>
+          <NavLink
+            className="flex items-center h-8 bg-white no-underline rounded border pt-1 pb-1 pl-4 pr-4 justify-center gap-1"
+            style={{
+              color: "#303030",
+              border: "#303030",
+              width: "145px",
+              fontSize: "12px",
+              fontWeight: "550",
+            }}
+            onClick={handleRegister}
+          >
+            Create Account
+            <GoArrowRight />
+          </NavLink>
+        </div>
       </div>
-      <div className="registerimagediv">
-        <img src={logo} alt="logo" />
+      <div>
+        <img src={logo} alt="logo" id="registerlogo" />
       </div>
     </div>
   );
 };
 
-export default Register;
