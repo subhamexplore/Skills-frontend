@@ -42,6 +42,7 @@ const SignIn = () => {
         toast.error(data.message);
       }
     } catch (error) {
+      setLoading(false);
       toast.error(error.message);
     }
   };

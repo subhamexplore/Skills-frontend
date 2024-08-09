@@ -48,7 +48,13 @@ const Register = () => {
   const [selectedFirstDomain, setSelectedFirstDomain] = useState("");
   const [selectedSecondDomain, setSelectedSecondDomain] = useState("");
 
-  console.log("formData", formData);
+  const handleFirstDomainChange = (event) => {
+    const selectedDomainName = event.target.value;
+    setSelectedFirstDomain(selectedDomainName);
+    if (selectedSecondDomain === selectedDomainName) {
+        setSelectedSecondDomain(""); 
+    }
+};
 
   const handleRegister = async () => {
     try {
@@ -213,7 +219,7 @@ const Register = () => {
               <select
                 name="description"
                 value={formData.domain1.description}
-                onChange={(e) => handleDomainChange(e, "domain1")}
+                onChange={(e) => {handleDomainChange(e, "domain1"); handleFirstDomainChange(e)}}
               >
                 <option value="">First Domain</option>
                 {Domains.map((domain, idx) => (

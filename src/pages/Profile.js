@@ -36,6 +36,7 @@ const Profile = ({setName}) => {
         setLoading(false);
         console.log(user);
       } catch (err) {
+        setLoading(false);
         console.log(err.message);
       }
     };
