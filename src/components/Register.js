@@ -110,7 +110,7 @@ const Register = () => {
         <div className="lg:hidden mt-4 mb-4">
           <img src={logo} alt="logo" />
         </div>
-        <div id="signininput">
+        <form id="signininput">
           <div>
             <input
               name="username"
@@ -118,6 +118,7 @@ const Register = () => {
               placeholder="Full Name"
               value={formData.username}
               onChange={handleChange}
+              required
             ></input>
           </div>
           <div className="flex flex-wrap justify-between">
@@ -131,6 +132,7 @@ const Register = () => {
                 placeholder="E - mail"
                 value={formData.email}
                 onChange={handleChange}
+                required
               ></input>
             </div>
             <div id="register-inputs-div" className="full-length relative">
@@ -140,6 +142,7 @@ const Register = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
+                required
               />
               <div
                 className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
@@ -157,6 +160,7 @@ const Register = () => {
                 name="regNo"
                 value={formData.regNo}
                 onChange={handleChange}
+                required
               ></input>
             </div>
             <div id="register-inputs-div">
@@ -166,6 +170,7 @@ const Register = () => {
                 placeholder="Phone Number"
                 value={formData.phNo}
                 onChange={handleChange}
+                required
               ></input>
             </div>
           </div>
@@ -175,6 +180,7 @@ const Register = () => {
                 name="branch"
                 value={formData.branch}
                 onChange={handleChange}
+                required
               >
                 <option value="">Branch</option>
                 <option value="Architecture">Architecture</option>
@@ -203,7 +209,7 @@ const Register = () => {
               </select>
             </div>
             <div id="register-inputs-div">
-              <select name="year" value={formData.year} onChange={handleChange}>
+              <select name="year" value={formData.year} onChange={handleChange} required>
                 <option value="">Year</option>
                 <option value="1st">1st</option>
                 <option value="2nd">2nd</option>
@@ -218,6 +224,7 @@ const Register = () => {
                 name="description"
                 value={formData.domain1.description}
                 onChange={(e)=>{handleDomain(e)}}
+                required
               >
                 <option value="">First Domain</option>
                 {Domains.map((domain, idx) => (
@@ -255,6 +262,7 @@ const Register = () => {
               placeholder="Drive Link (for First Domain)"
               value={formData.domain1.drive}
               onChange={(e) => handleDomainChange(e, "domain1")}
+              required
             ></input>
           </div>
           <div>
@@ -271,7 +279,7 @@ const Register = () => {
             This is the place where you will submit your solutions for the given
             task. So keep this drive safely with you
           </div>
-        </div>
+        </form>
         <div className="flex lg:justify-end justify-between gap-4 mt-8">
           <NavLink
             to="/"
