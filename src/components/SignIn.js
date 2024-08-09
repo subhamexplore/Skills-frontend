@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import logo from "../assets/images/signinlogo.png";
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
+import Loader from "../components/Loader";
 
 const SignIn = () => {
   const nav = useNavigate();
+  const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -19,24 +21,34 @@ const SignIn = () => {
   };
   const handleLogin = async () => {
     try {
-      const response = await fetch("https://skills-backend-r5yi.onrender.com/users/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      setLoading(true);
+      const response = await fetch(
+        "https://skills-backend-r5yi.onrender.com/users/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await response.json();
       localStorage.setItem("authToken", data.token);
-      toast.success("Successfully logged in");
-      window.location.href = '/profile';
+      setLoading(false);
+      if (data.message === "Logged in successfully") {
+        toast.success(data.message);
+        window.location.href = "/profile";
+      } else {
+        toast.error(data.message);
+      }
     } catch (error) {
       toast.error(error.message);
-      // alert("Failed! Try again.");
     }
   };
   return (
-    <div id="signin" className="flex justify-center">
+    <>
+    {loading && <Loader/>}
+    <div id="signin" className={loading ? 'content blurred flex justify-center' : 'content flex justify-center'} >
       <div id="signintext">
         <div id="signintextcontainer" style={{ padding: "0px 16px 10px 16px" }}>
           <div id="signintextheading">
@@ -122,6 +134,7 @@ const SignIn = () => {
         <img src={logo} alt="logo" id="signinlogo" />
       </div>
     </div>
+    </>
   );
 };
 
