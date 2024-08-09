@@ -2,41 +2,42 @@
 
 /* Write all the styles here  */
 
-@font-face {  /*Moon-walk font*/
+@font-face {
+  /*Moon-walk font*/
   font-family: Moon-walk;
   src: url(./assets/fonts/Moon\ Walk.ttf);
 }
-body{
+body {
   background-color: #000720;
-  overflow-x:hidden;
+  overflow-x: hidden;
   user-select: none;
 }
-#sub-heading{
-  color: #9A8DEC;
+#sub-heading {
+  color: #9a8dec;
   font-size: 35px;
   font-weight: 500;
   display: block;
   line-height: 50px;
 }
-#heading{
-  color: #FFFFFF; 
-  font-Family: Moon-walk;
+#heading {
+  color: #ffffff;
+  font-family: Moon-walk;
   font-size: 65px;
   display: block;
   line-height: 65px;
 }
 #navbar {
-  font-family: "Inter", sans-serif;   /*Inter font*/
-  }
-#navbar-cta{
+  font-family: "Inter", sans-serif; /*Inter font*/
+}
+#navbar-cta {
   position: relative;
   top: 5px;
 }
-.nav-links{
-    color: #E8DCDC;
-    text-decoration: none;
+.nav-links {
+  color: #e8dcdc;
+  text-decoration: none;
 }
-#rectangle{
+#rectangle {
   display: flex;
   position: relative;
   top: -50px;
@@ -44,16 +45,15 @@ body{
   align-items: end;
   z-index: -150;
 }
-#rectangle2{
+#rectangle2 {
   position: relative;
   top: -10px;
 }
-#rectangle3{
+#rectangle3 {
   position: relative;
   z-index: -150;
-
 }
-#section1{
+#section1 {
   margin: 160px 7vw 0;
   position: relative;
   top: -220px;
@@ -64,10 +64,10 @@ body{
   justify-content: space-around;
   align-items: end;
 }
-.section1items{
+.section1items {
   width: 540px;
 }
-#section2{
+#section2 {
   margin: 0 7vw 0;
   display: flex;
   flex-wrap: wrap-reverse;
@@ -75,109 +75,109 @@ body{
   justify-content: space-around;
   align-items: center;
   position: relative;
-  margin-top:-300px;
+  margin-top: -300px;
 }
-@media(max-width:1260px){
-  #section2{
-    margin-top:0;
+@media (max-width: 1260px) {
+  #section2 {
+    margin-top: 0;
   }
 }
-.section2items{
+.section2items {
   width: 540px;
   margin: 30px 0 30px;
 }
-#section3{
-  background: #9A8DEC;
+#section3 {
+  background: #9a8dec;
   font-family: "Inter", sans-serif;
   margin: 0px 0 30px;
   padding: 40px;
   text-align: center;
 }
-#section3itemscontainer{
+#section3itemscontainer {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
   gap: 20px;
 }
-#section4{
+#section4 {
   margin: 0 7vw 0;
   text-align: center;
-  color: #C3C1CE;
+  color: #c3c1ce;
   font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-#section4text{
+#section4text {
   height: 200px;
   max-width: 590px;
 }
-#section4imgcontainer{
+#section4imgcontainer {
   margin: 60px 0 60px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
 }
-#badge1{
+#badge1 {
   position: relative;
   top: 29px;
 }
-#section5{
+#section5 {
   font-family: "Inter", sans-serif;
   margin: 0px 7vw 0px;
   text-align: center;
 }
-#section5item1{
+#section5item1 {
   padding: 30px 25px 15px;
   min-height: 60px;
-  background: #362D6D;
+  background: #362d6d;
   border-radius: 20px 20px 0 0;
   text-align: left;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-#section5item1 .text{
+#section5item1 .text {
   word-wrap: break-word;
 }
-#dropdown-menu{
+#dropdown-menu {
   font-size: 14px;
-  background: #362D6D;
-  border: 1px solid #DAD8EA;
+  background: #362d6d;
+  border: 1px solid #dad8ea;
   border-radius: 5px;
   padding: 4px 12px 4px;
-  color: #DAD8EA;
+  color: #dad8ea;
 }
-#section5item2{
+#section5item2 {
   min-height: 360px;
-  background: #1A1635;
+  background: #1a1635;
   border-radius: 0 0 20px 20px;
-  color: #C8CDDC;
+  color: #c8cddc;
   text-align: center;
   display: flex;
   align-items: center;
 }
-#section5foldercontainer{
+#section5foldercontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-#section5folders{
+#section5folders {
   width: 185px;
   padding: 20px;
 }
-#section5folders img{
+#section5folders img {
   margin: auto;
 }
-#section5folders figcaption{
+#section5folders figcaption {
   margin-top: 16px;
   font-size: 16px;
   line-height: 20.8px;
 }
-#section6{
+#section6 {
   font-family: "Inter", sans-serif;
   margin: 0px 7vw 60px;
 }
@@ -188,144 +188,146 @@ body{
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #1A1635;
+  background-color: #1a1635;
   color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
   font-size: 30px;
 }
-#footer{
+#footer {
   min-height: 108px;
-  background: #9A8DEC;
+  background: #9a8dec;
   padding: 2vw 10vw 2vw;
 }
-#footer-left{
+#footer-left {
   max-width: 587px;
 }
-#footer-text{
+#footer-text {
   max-width: 527px;
-  color: #C8CDDC;
+  color: #c8cddc;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   size: 16px;
   line-height: 21.6px;
 }
-#footer-right{
+#footer-right {
   font-family: "Inter", sans-serif;
   line-height: 21.6px;
   size: 16px;
   font-weight: 700;
 }
 
-#signin{
+#signin {
   padding: 180px 16px 20px 16px;
-  margin:  0 0 8vw;
+  margin: 0 0 8vw;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: #C3C1CE;
+  color: #c3c1ce;
 }
-#signintext{
+#signintext {
   width: 500px;
 }
-#signintextcontainer{
+#signintextcontainer {
   text-align: left;
 }
-#signintextheading{
+#signintextheading {
   margin-bottom: 52px;
 }
-#signininput{
+#signininput {
   width: 500px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   justify-content: space-between;
 }
-#signininput div input{
+#signininput div input {
   width: 100%;
-  background: #1A1635;
+  background: #1a1635;
   border-radius: 4px;
   padding: 12px 16px 12px 16px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-#signinlogo{
+#signinlogo {
   height: 417px;
   width: 462px;
 }
-#help{
+#help {
   display: none;
 }
-#forgotpassworddiv:hover + #help{
+#forgotpassworddiv:hover + #help {
   display: block;
 }
-#register{
+#register {
   padding: 180px 16px 20px 16px;
-  margin:  0vw 0vw 0vw;
+  margin: 0vw 0vw 0vw;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: #C3C1CE;
+  color: #c3c1ce;
 }
-#register-inputs-div{
+#register-inputs-div {
   width: 242px;
 }
-#register-inputs-div select{
+#register-inputs-div select {
   width: 100%;
   padding: 12px 16px 12px 16px;
   height: 42px;
-  background:#1A1635;
+  background: #1a1635;
   border-radius: 4px;
 }
-#registerlogo{
+#registerlogo {
   position: sticky;
   top: 180px;
   height: 427.41px;
-  width:409.52px;
+  width: 409.52px;
 }
-#profile{
+#profile {
   margin: auto;
   padding-top: 130px;
   padding-bottom: 50px;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: #C3C1CE;
+  color: #c3c1ce;
   justify-content: center;
 }
-#domaincards{
+#domaincards {
   width: 259px;
 }
-@media screen and (max-width:2560px) and (min-width:1440px) {
-  #register,#signin{
+@media screen and (max-width: 2560px) and (min-width: 1440px) {
+  #register,
+  #signin {
     gap: 6vw;
   }
-  #profile{
+  #profile {
     gap: 50px;
   }
-  #suggestion-box{
+  #suggestion-box {
     width: 351px;
   }
 }
-@media screen and (max-width:1440px) and (min-width:1024px) {
-  #register,#signin{
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  #register,
+  #signin {
     gap: 8vw;
   }
-  #profile{
+  #profile {
     padding-left: 16px;
     padding-right: 16px;
     gap: 50px;
   }
-  #suggestion-box{
+  #suggestion-box {
     width: 351px;
   }
 }
 
-@media screen and (max-width:1024px){
-  #rectangle{
+@media screen and (max-width: 1024px) {
+  #rectangle {
     top: -80px;
   }
-  #section2{
-    margin-top:50px;
+  #section2 {
+    margin-top: 50px;
   }
-  #suggestion-box{
+  #suggestion-box {
     width: 351px;
   }
 }
@@ -333,209 +335,248 @@ body{
   #section4imgcontainer div img {
     -webkit-transform: scale(1);
     transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
   #section4imgcontainer div:hover img {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
   }
 }
-@media screen and (max-width: 1024px){
-  #signinlogo,#registerlogo,#profilelogo{
+@media screen and (max-width: 1024px) {
+  #signinlogo,
+  #registerlogo,
+  #profilelogo {
     display: none;
   }
 }
 @media screen and (max-width: 769px) {
-  .nav-links{
+  .nav-links {
     margin-top: 20px;
   }
-  #rectangle3{
+  #rectangle3 {
     left: -100%;
   }
-  #signinlogo,#registerlogo{
+  #signinlogo,
+  #registerlogo {
     display: none;
   }
-  #signintextcontainer{
+  #signintextcontainer {
     text-align: center;
   }
-  #profileheading{
+  #profileheading {
     text-align: center;
-    padding:0px 16px 10px 16px;
+    padding: 0px 16px 10px 16px;
   }
-  #profiletext{
+  #profiletext {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #userdetails{
-    width:451px;
+  #userdetails {
+    width: 451px;
   }
-  #suggestion-box{
-    width:451px;
+  #suggestion-box {
+    width: 451px;
   }
 }
-@media screen and (max-width:640px){
-  #heading{
+@media screen and (max-width: 640px) {
+  #heading {
     font-size: 50px;
     line-height: 45px;
   }
-  #sub-heading{
+  #sub-heading {
     font-size: 25px;
     line-height: 35px;
   }
-  #section4imgcontainer div{
+  #section4imgcontainer div {
     width: 40%;
   }
-  #badge1{
-    top:25px;
+  #badge1 {
+    top: 25px;
   }
 }
-@media screen and (max-width:480px){
-  #rectangle{
+@media screen and (max-width: 480px) {
+  #rectangle {
     width: 70%;
     margin-left: auto;
     top: -50px;
   }
-  #section2{
+  #section2 {
     margin-top: -60px;
   }
-  #section5folders{
+  #section5folders {
     width: 130px;
   }
-  #section5folders img{
+  #section5folders img {
     width: 70px;
   }
-  #section5folders figcaption{
+  #section5folders figcaption {
     margin-top: 12px;
     font-size: 12px;
     line-height: 15.6px;
   }
-  #section5item1{
+  #section5item1 {
     font-size: 16px;
   }
-  #dropdown-menu{
+  #dropdown-menu {
     padding: 5px 4px 5px;
   }
-  #footer{
+  #footer {
     padding: 6vw 5vw 12vw;
   }
-  #signintext{
+  #signintext {
     width: 350px;
   }
-  #signintextheading{
+  #signintextheading {
     margin-bottom: 24px;
   }
-  #signininput{
+  #signininput {
     width: 100%;
   }
-  .sub-heading{
+  .sub-heading {
     font-size: 18px;
   }
-  .heading{
+  .heading {
     font-size: 42px;
   }
-  #register-inputs-div{
+  #register-inputs-div {
     width: 167px;
   }
-  #register-inputs-div select{
+  #register-inputs-div select {
     height: auto;
     width: 100%;
   }
-  .full-length{
+  .full-length {
     min-width: 350px;
   }
-  .full-lengthitem1{
+  .full-lengthitem1 {
     margin-bottom: 16px;
   }
-  #domaincards{
+  #domaincards {
     width: 351px;
   }
-  #userdetails{
-    width:351px;
+  #userdetails {
+    width: 351px;
   }
-  #suggestion-box{
-    width:351px;
+  #suggestion-box {
+    width: 351px;
   }
 }
-@media screen and (max-width:420px){
-  #rectangle{
+@media screen and (max-width: 420px) {
+  #rectangle {
     width: 75%;
   }
-  #section2{
+  #section2 {
     margin-top: -120px;
   }
-  #badge1{
-    top:17px;
+  #badge1 {
+    top: 17px;
   }
-  #register-inputs-div{
+  #register-inputs-div {
     width: 150px;
   }
-  #register-inputs-div select{
+  #register-inputs-div select {
     width: 100%;
   }
-  .registertext{
+  .registertext {
     max-width: 320px;
   }
-  .full-length{
+  .full-length {
     min-width: 320px;
   }
-  .full-lengthitem1{
+  .full-lengthitem1 {
     margin-bottom: 16px;
   }
 }
-@media screen and (max-width:375px) {
-  #rectangle{
+@media screen and (max-width: 375px) {
+  #rectangle {
     width: 80%;
   }
-  .registertext{
+  .registertext {
     max-width: 300px;
   }
-  .full-length{
+  .full-length {
     min-width: 300px;
   }
-  .full-lengthitem1{
+  .full-lengthitem1 {
     margin-bottom: 16px;
   }
-  #register-inputs-div{
+  #register-inputs-div {
     width: 140px;
   }
-  #domaincards{
+  #domaincards {
     width: 290px;
   }
-  #userdetails{
-    width:290px;
+  #userdetails {
+    width: 290px;
   }
-  #suggestion-box{
-    width:290px;
+  #suggestion-box {
+    width: 290px;
   }
 }
-@media screen and (max-width:320px) {
-  #section5folders{
+@media screen and (max-width: 320px) {
+  #section5folders {
     width: 125px;
   }
-  #section5folders img{
+  #section5folders img {
     width: 65px;
   }
-  .registertext{
+  .registertext {
     max-width: 280px;
   }
-  .full-length{
+  .full-length {
     min-width: 280px;
   }
-  .full-lengthitem1{
+  .full-lengthitem1 {
     margin-bottom: 16px;
   }
-  #register-inputs-div{
+  #register-inputs-div {
     width: 130px;
   }
-  #domaincards{
+  #domaincards {
     width: 270px;
   }
-  #userdetails{
-    width:270px;
+  #userdetails {
+    width: 270px;
   }
-  #suggestion-box{
-    width:270px;
+  #suggestion-box {
+    width: 270px;
   }
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  z-index: 9999; /* Ensure the loader is on top */
+}
+
+#loadimg {
+  width: 100px; /* Adjust the size of the image */
+  height: 100px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  transition: filter 0.3s ease;
+}
+
+.blurred {
+  filter: blur(5px);
 }

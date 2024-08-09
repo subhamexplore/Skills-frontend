@@ -36,7 +36,6 @@ const Profile = ({setName}) => {
         setLoading(false);
         console.log(user);
       } catch (err) {
-        toast.error(err.message);
         console.log(err.message);
       }
     };
